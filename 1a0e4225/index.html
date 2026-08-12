@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>КП · Сайт Символ Девелопмент</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="Коммерческое предложение · сайт символ.рф">
+<meta property="og:description" content="Цифровая витрина Символ Девелопмент: состав работ, сроки, стоимость. Конструктор — от любого блока можно отказаться.">
+<meta property="og:image" content="https://rostik43.github.io/simvol-kp/1a0e4225/img/og-kp.png">
+<meta property="og:url" content="https://rostik43.github.io/simvol-kp/1a0e4225/">
+<meta property="og:locale" content="ru_RU">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  @font-face{font-family:'Bounded';src:url('fonts/Bounded-Regular.ttf') format('truetype');font-weight:400;font-display:swap}
+  @font-face{font-family:'Bounded';src:url('fonts/Bounded-ExtraLight.ttf') format('truetype');font-weight:200;font-display:swap}
+  :root{
+    --deep:#310382; --royal:#5703AC; --navy:#110163; --grey:#EBEDF2; --ink:#1B1730; --sub:#6E6A80; --line:rgba(27,23,48,.12);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Jost',sans-serif;background:var(--grey);color:var(--ink);font-weight:400}
+  .d{font-family:'Bounded',sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.02em}
+  .page{max-width:900px;margin:0 auto;padding:0 1.5rem 4rem}
+
+  /* шапка */
+  .top{background:linear-gradient(135deg,var(--navy),var(--deep) 60%,var(--royal));color:#fff;padding:3.2rem 0 2.8rem;margin-bottom:2.6rem}
+  .top .page{padding-bottom:0}
+  .top img{height:46px;margin-bottom:2rem}
+  .top h1{font-size:clamp(1.3rem,3.4vw,2.1rem);line-height:1.3}
+  .top .meta{margin-top:1.4rem;font-size:.85rem;color:rgba(255,255,255,.75);display:flex;gap:2rem;flex-wrap:wrap}
+
+  h2.d{font-size:1.05rem;color:var(--royal);margin:2.8rem 0 1.1rem;letter-spacing:.06em}
+  p.lead{font-size:1rem;line-height:1.65;max-width:64ch}
+  p.lead a{color:var(--royal)}
+
+  /* блоки работ */
+  .card{background:#fff;border:1px solid var(--line);border-radius:1rem;padding:1.15rem 1.3rem;margin-bottom:.7rem;display:flex;gap:1rem;align-items:flex-start}
+  .card input{width:19px;height:19px;margin-top:.2rem;accent-color:var(--royal);flex:none;cursor:pointer}
+  .card.core input{cursor:default}
+  .card .body{flex:1}
+  .card b{font-weight:600;font-size:.98rem;display:block}
+  .card p{font-size:.86rem;color:var(--sub);line-height:1.55;margin-top:.25rem}
+  .card .price{font-family:'Bounded',sans-serif;font-weight:400;font-size:.92rem;white-space:nowrap;color:var(--ink)}
+  .card.off{opacity:.45}
+  .tagcore{display:inline-block;font-size:.62rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--royal);border:1px solid rgba(87,3,172,.3);border-radius:999px;padding:.16rem .6rem;margin-left:.5rem;vertical-align:2px}
+
+  /* итог */
+  .total{position:sticky;bottom:0;background:var(--navy);color:#fff;border-radius:1rem 1rem 0 0;padding:1.3rem 1.6rem;display:flex;justify-content:space-between;align-items:center;gap:1rem;margin-top:1.6rem;box-shadow:0 -10px 40px rgba(17,1,99,.25)}
+  .total .cap{font-size:.78rem;color:rgba(255,255,255,.7)}
+  .total .sum{font-family:'Bounded',sans-serif;font-size:clamp(1.2rem,3vw,1.7rem)}
+  .total .note{font-size:.72rem;color:rgba(255,255,255,.55);max-width:26ch;text-align:right}
+
+  /* таблицы этапов/условий */
+  .rows{background:#fff;border:1px solid var(--line);border-radius:1rem;overflow:hidden}
+  .row{display:flex;justify-content:space-between;gap:1rem;padding:.95rem 1.3rem;border-bottom:1px solid var(--line);font-size:.92rem}
+  .row:last-child{border-bottom:none}
+  .row span:last-child{color:var(--sub);text-align:right}
+  .fine{font-size:.75rem;color:var(--sub);line-height:1.6;margin-top:2.4rem;border-top:1px solid var(--line);padding-top:1.2rem}
+
+  /* действия: ссылка с конфигурацией и печать */
+  .actions{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1rem;align-items:center}
+  .actions button{font-family:'Jost',sans-serif;font-size:.85rem;font-weight:500;cursor:pointer;border-radius:999px;padding:.75rem 1.4rem;border:1px solid var(--royal);background:var(--royal);color:#fff;transition:background .25s,transform .25s}
+  .actions button:hover{background:#4A0292;transform:translateY(-1px)}
+  .actions button.ghost{background:transparent;color:var(--royal)}
+  .actions button.ghost:hover{background:rgba(87,3,172,.07)}
+  .actions .hint{font-size:.78rem;color:var(--sub);flex-basis:100%;line-height:1.5}
+  .actions .hint b{color:var(--ink);font-weight:500}
+
+  /* контакты */
+  .contact{background:#fff;border:1px solid var(--line);border-radius:1rem;padding:1.3rem 1.5rem;margin-top:1.2rem;display:flex;gap:1.4rem;flex-wrap:wrap;align-items:center;justify-content:space-between}
+  .contact .who b{font-weight:600;font-size:.98rem;display:block}
+  .contact .who span{font-size:.85rem;color:var(--sub)}
+  .contact .links{display:flex;gap:1.2rem;flex-wrap:wrap;font-size:.92rem}
+  .contact .links a{color:var(--royal);text-decoration:none;border-bottom:1px solid rgba(87,3,172,.3)}
+
+  .print-only{display:none}
+
+  @media print{
+    /* поля нулевые — шапка идёт «в обрез», отступы задаём внутри .page */
+    @page{margin:0}
+    body{background:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .page{max-width:none;padding:0 16mm 10mm}
+    .top{margin-bottom:1.2rem;padding:16mm 0 12mm;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .total{position:static;box-shadow:none;border-radius:1rem;break-inside:avoid;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .card{break-inside:avoid}
+    .contact{break-inside:avoid}
+    .rows{break-inside:avoid}
+    h2.d{break-after:avoid}
+    /* в печать уходит только выбранный состав */
+    .card.off{display:none}
+    .actions{display:none}
+    .print-only{display:block}
+  }
+</style>
+</head>
+<body>
+
+<div class="top">
+  <div class="page">
+    <img src="img/brand/logo-h-white.png" alt="Символ Девелопмент">
+    <h1 class="d">Коммерческое предложение<br>цифровая витрина символ.рф</h1>
+    <div class="meta">
+      <span>Для: ООО «Символ Девелопмент»</span>
+      <span>Дата: 12 августа 2026</span>
+      <span>Действительно 30 дней</span>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+
+  <p class="lead">Мы уже собрали работающий прототип сайта в вашем фирменном стиле — с видео с дрона над Леоновым, настоящими рендерами проектов, скролл-управляемым полётом и ипотечным калькулятором. Это предложение — о том, чтобы превратить прототип в боевой сайт. Состав ниже — конструктор: базовое ядро фиксировано, от любой опции можно отказаться, итог пересчитается.</p>
+
+  <h2 class="d">Базовое ядро — входит всегда</h2>
+  <div id="core">
+    <label class="card core"><input type="checkbox" checked disabled><span class="body"><b>Дизайн-система по логобуку<span class="tagcore">ядро</span></b><p>Bounded + Jost, фирменная палитра, UI-кит компонентов. Всё, что вы видели в прототипе, — приведённое к системе, которую можно развивать.</p></span><span class="price" data-p="90000">90 000 ₽</span></label>
+    <label class="card core"><input type="checkbox" checked disabled><span class="body"><b>Главная страница — 10 блоков вашего ТЗ<span class="tagcore">ядро</span></b><p>Полноэкранное видео в hero (ролики у вас уже сняты — мы режем их в лёгкие лупы по 3–5 МБ), проекты, «рендер → реальность», ценности, цифры, форма-спутник. Премиальные анимации уровня федеральных девелоперов.</p></span><span class="price" data-p="170000">170 000 ₽</span></label>
+    <label class="card core"><input type="checkbox" checked disabled><span class="body"><b>Страницы проектов — шаблон + 9 ЖК<span class="tagcore">ядро</span></b><p>Метафора, Леонов, Монблан, СОК, Ласка, Высота + сданные дома. Галерея, видео, планировки, статус стройки — наполняем из ваших материалов на Яндекс.Диске.</p></span><span class="price" data-p="150000">150 000 ₽</span></label>
+    <label class="card core"><input type="checkbox" checked disabled><span class="body"><b>Каталог квартир — Profitbase<span class="tagcore">ядро · выбор варианта</span></b><p>Живой подбор с ценами и остатками из вашей системы продаж: если квартира видна — она свободна. Сайт — первоисточник цен, а не визитка.</p>
+      <p style="margin-top:.6rem"><label style="display:block;cursor:pointer"><input type="radio" name="cat" value="90000" checked style="accent-color:var(--royal)"> <b style="display:inline;font-size:.85rem">Глубокая интеграция — 90 000 ₽</b> · карточки и фильтры в дизайне Символа, данные из Profitbase</label>
+      <label style="display:block;cursor:pointer;margin-top:.3rem"><input type="radio" name="cat" value="50000" style="accent-color:var(--royal)"> <b style="display:inline;font-size:.85rem">Готовый виджет — 50 000 ₽</b> · быстрее и дешевле, интерфейс каталога — стандартный от Profitbase</label></p>
+    </span><span class="price" id="catPrice" data-p="90000">90 000 ₽</span></label>
+    <label class="card core"><input type="checkbox" checked disabled><span class="body"><b>Заявки с контекстом + ипотечный калькулятор<span class="tagcore">ядро</span></b><p>Менеджер получает не «телефон», а задачу клиента: какой лот смотрел, что выбрал. Дубль в Telegram отдела продаж. Калькулятор с платежом в месяц — прямо в карточке.</p></span><span class="price" data-p="60000">60 000 ₽</span></label>
+    <label class="card core"><input type="checkbox" checked disabled><span class="body"><b>Мобильная версия, скорость, SEO<span class="tagcore">ядро</span></b><p>Полный адаптив, быстрая загрузка (видео-лупы легче, чем у большинства федеральных сайтов), отдельные URL квартир и планировок для поисковиков.</p></span><span class="price" data-p="60000">60 000 ₽</span></label>
+  </div>
+
+  <h2 class="d">Опции — можно исключить любую</h2>
+  <div id="opts">
+    <label class="card"><input type="checkbox" checked><span class="body"><b>Скролл-кино на страницах проектов</b><p>Ваши съёмки превращаются в полёт, которым управляет колесо мыши (демо уже работает на Леонове). До 9 проектов. Такого нет ни у одного застройщика региона.</p></span><span class="price" data-p="100000">100 000 ₽</span></label>
+    <label class="card"><input type="checkbox" checked><span class="body"><b>Интерактивная карта Ижевск ⇄ Крым</b><p>Тёмная фирменная карта, переключение регионов, фильтры по статусу. Каждая метка открывает фото, панораму 360 и 3D-тур — они у вас уже есть в партнёрском кабинете, мы их встраиваем.</p></span><span class="price" data-p="70000">70 000 ₽</span></label>
+    <label class="card"><input type="checkbox" checked><span class="body"><b>Ход строительства + документы 214-ФЗ</b><p>Фотолента каждого объекта по месяцам (загрузка — в две кнопки) и автоматический раздел проектных деклараций. Доверие как контент, критично для покупателей издалека.</p></span><span class="price" data-p="70000">70 000 ₽</span></label>
+    <label class="card"><input type="checkbox" checked><span class="body"><b>Инвестиционный модуль для Крыма</b><p>Блок «квартира, которая зарабатывает»: вход, прогнозная доходность, управление, юридически выверенные формулировки. Отдельная воронка для инвесторов.</p></span><span class="price" data-p="40000">40 000 ₽</span></label>
+    <label class="card"><input type="checkbox" checked><span class="body"><b>Интеграция партнёрского кабинета</b><p>Ваш кабинет для агентств (an.noname-group.ru) связываем с новым сайтом: единая точка входа для агентов, переезд на agents.символ.рф — материалы АН под вашим брендом, а не noname.</p></span><span class="price" data-p="50000">50 000 ₽</span></label>
+    <label class="card"><input type="checkbox" checked><span class="body"><b>Акции-сторис с таймерами</b><p>Витрина акций в формате сторис, обратный отсчёт, маркировка «Реклама» по 38-ФЗ.</p></span><span class="price" data-p="40000">40 000 ₽</span></label>
+    <label class="card"><input type="checkbox" checked><span class="body"><b>Админ-панель</b><p>Ваш маркетолог сам управляет сайтом без программиста: акции, баннеры, фото хода строительства, тексты, цены «от», новые страницы из готовых блоков. Цены квартир при этом обновляются автоматически из Profitbase — руками их не трогает никто.</p></span><span class="price" data-p="80000">80 000 ₽</span></label>
+    <label class="card"><input type="checkbox" checked><span class="body"><b>Медиапакет</b><p>Режем все ваши съёмки в веб-лупы — короткие закольцованные видео без звука, лёгкие как картинка (hero каждого ЖК, вертикальные — для мобильных). Обработка фотобанка, ИИ-дополнение недостающих кадров.</p></span><span class="price" data-p="60000">60 000 ₽</span></label>
+    <label class="card"><input type="checkbox" checked><span class="body"><b>Версия для слабовидящих</b><p>Соответствие требованиям доступности для сайтов застройщиков.</p></span><span class="price" data-p="30000">30 000 ₽</span></label>
+    <label class="card"><input type="checkbox" checked><span class="body"><b>Запуск, обучение, месяц сопровождения</b><p>Домен символ.рф, хостинг, аналитика (Метрика, цели), обучение сотрудника обновлению контента, месяц правок после запуска — бесплатный.</p></span><span class="price" data-p="40000">40 000 ₽</span></label>
+  </div>
+
+  <div class="total">
+    <div><div class="cap">Итого по выбранному составу</div><div class="sum" id="sum">1 200 000 ₽</div></div>
+    <div class="note" id="noteOpts">полный пакет · 9 опций из 9</div>
+  </div>
+
+  <div class="actions">
+    <button type="button" id="btnLink">Скопировать ссылку с этим составом</button>
+    <button type="button" class="ghost" id="btnPrint">Сохранить в PDF</button>
+    <p class="hint">Снимите галочки с опций, которые не нужны, — сумма пересчитается. <b>Ссылка запоминает ваш состав:</b> отправьте её нам обратно, и мы увидим ровно ту конфигурацию, которую вы собрали. В PDF попадают только выбранные блоки.</p>
+  </div>
+
+  <p class="print-only fine" id="printCfg"></p>
+
+  <h2 class="d">Сроки и порядок работ</h2>
+  <div class="rows">
+    <div class="row"><span>1. Дизайн-система и главная страница</span><span>2–3 недели</span></div>
+    <div class="row"><span>2. Страницы проектов и каталог Profitbase</span><span>2–3 недели</span></div>
+    <div class="row"><span>3. Опции, наполнение, тестирование</span><span>2 недели</span></div>
+    <div class="row"><span>4. Запуск на символ.рф и обучение</span><span>3–5 дней</span></div>
+    <div class="row"><span><b>Полный срок при полном пакете</b></span><span><b>6–8 недель</b></span></div>
+  </div>
+
+  <h2 class="d">Оплата</h2>
+  <div class="rows">
+    <div class="row"><span>Аванс при старте</span><span>50%</span></div>
+    <div class="row"><span>После согласования главной и шаблона ЖК</span><span>30%</span></div>
+    <div class="row"><span>После запуска на домене</span><span>20%</span></div>
+  </div>
+
+  <h2 class="d">После запуска — по желанию</h2>
+  <div class="rows">
+    <div class="row"><span>Техническое сопровождение и обновления (от 2-го месяца)</span><span>25 000 – 40 000 ₽/мес</span></div>
+    <div class="row"><span>ИИ-ассистент подбора квартир: диалог вместо 50 фильтров на сайте и в Telegram, тёплые лиды с контекстом (у нас уже работают такие боты в других отраслях)</span><span>от 100 000 ₽ + от 15 000 ₽/мес</span></div>
+  </div>
+
+  <h2 class="d">Что понадобится от вас</h2>
+  <div class="rows">
+    <div class="row"><span>Доступ к Profitbase (или контакт менеджера)</span><span>к старту этапа 2</span></div>
+    <div class="row"><span>Доступ к домену символ.рф и CRM</span><span>к запуску</span></div>
+    <div class="row"><span>Контент</span><span>уже получен: логобук, фото, видео, рендеры</span></div>
+  </div>
+
+  <p class="fine">Живой прототип, собранный до подписания договора, — по ссылке, которую мы показывали на встрече (обновляется). Цены действительны 30 дней с даты предложения и фиксируются договором. Настоящее предложение не является публичной офертой (ст. 437 ГК РФ). Отключение опций уменьшает состав и стоимость, базовое ядро — неделимый минимум качественного результата.</p>
+</div>
+
+<script>
+(function(){
+  const fmt = v => v.toLocaleString('ru-RU') + ' ₽';
+  const cards = [...document.querySelectorAll('#opts .card')];
+  function coreTotal(){
+    /* цена каталога зависит от выбранного варианта (виджет/интеграция) */
+    const cat = document.querySelector('input[name=cat]:checked');
+    const catEl = document.getElementById('catPrice');
+    catEl.dataset.p = cat.value;
+    catEl.textContent = fmt(+cat.value);
+    return [...document.querySelectorAll('#core .price')].reduce((s,el)=>s + +el.dataset.p, 0);
+  }
+  function recalc(){
+    let sum = coreTotal(), on = 0;
+    cards.forEach(c => {
+      const cb = c.querySelector('input');
+      c.classList.toggle('off', !cb.checked);
+      if (cb.checked){ sum += +c.querySelector('.price').dataset.p; on++; }
+    });
+    document.getElementById('sum').textContent = fmt(sum);
+    document.getElementById('noteOpts').textContent =
+      on === cards.length ? 'полный пакет · все ' + cards.length + ' опций' : 'ядро + ' + on + ' опций из ' + cards.length;
+    syncUrl();
+    printLine();
+  }
+
+  /* ---- конфигурация внутри ссылки: ?c=i1111111111 ----
+     первый символ — вариант каталога (i = интеграция, w = виджет), далее по цифре на опцию */
+  function applyCfg(){
+    const code = new URLSearchParams(location.search).get('c');
+    if (!code) return;
+    const catVal = code[0] === 'w' ? '50000' : '90000';
+    const radio = document.querySelector('input[name=cat][value="' + catVal + '"]');
+    if (radio) radio.checked = true;
+    const bits = code.slice(1);
+    cards.forEach((c, i) => {
+      if (bits[i] === '0' || bits[i] === '1') c.querySelector('input').checked = bits[i] === '1';
+    });
+  }
+  function cfgCode(){
+    const cat = document.querySelector('input[name=cat]:checked').value === '50000' ? 'w' : 'i';
+    return cat + cards.map(c => c.querySelector('input').checked ? '1' : '0').join('');
+  }
+  function syncUrl(){
+    history.replaceState(null, '', location.pathname + '?c=' + cfgCode());
+  }
+
+  /* строка состава для печати: что исключено */
+  function printLine(){
+    const off = cards.filter(c => !c.querySelector('input').checked)
+                     .map(c => c.querySelector('b').childNodes[0].textContent.trim());
+    const cat = document.querySelector('input[name=cat]:checked').value === '50000'
+      ? 'каталог — готовый виджет Profitbase' : 'каталог — глубокая интеграция Profitbase';
+    document.getElementById('printCfg').textContent =
+      'Состав предложения: ' + cat + '. ' +
+      (off.length ? 'Исключено по вашему выбору (' + off.length + '): ' + off.join('; ') + '.'
+                  : 'Полный пакет, все опции включены.');
+  }
+
+  document.querySelectorAll('input[name=cat]').forEach(r => r.addEventListener('change', recalc));
+  cards.forEach(c => c.querySelector('input').addEventListener('change', recalc));
+
+  applyCfg();
+  recalc();
+
+  /* кнопки */
+  const btnLink = document.getElementById('btnLink');
+  btnLink.addEventListener('click', () => {
+    const url = location.origin + location.pathname + '?c=' + cfgCode();
+    const done = () => { const t = btnLink.textContent; btnLink.textContent = 'Ссылка скопирована ✓';
+                         setTimeout(()=>btnLink.textContent = t, 2200); };
+    if (navigator.clipboard && location.protocol !== 'file:'){
+      navigator.clipboard.writeText(url).then(done).catch(()=>prompt('Скопируйте ссылку:', url));
+    } else prompt('Скопируйте ссылку:', url);
+  });
+  document.getElementById('btnPrint').addEventListener('click', () => window.print());
+})();
+</script>
+</body>
+</html>
