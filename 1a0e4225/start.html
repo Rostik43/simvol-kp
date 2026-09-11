@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>Старт проекта · Сайт Символ Девелопмент</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="Старт проекта · сайт символ.рф">
+<meta property="og:description" content="Как мы будем строить сайт: состав, календарь на 8 недель, что нужно от вас на старте.">
+<meta property="og:image" content="https://rostik43.github.io/simvol-kp/1a0e4225/img/og-kp.png">
+<meta property="og:locale" content="ru_RU">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  @font-face{font-family:'Bounded';src:url('fonts/Bounded-Regular.ttf') format('truetype');font-weight:400;font-display:swap}
+  :root{--deep:#310382;--royal:#5703AC;--navy:#110163;--grey:#EBEDF2;--ink:#1B1730;--sub:#6E6A80;--line:rgba(27,23,48,.12);--lilac:#A879E8;--glow:#D9CCF5}
+  *{margin:0;padding:0;box-sizing:border-box}
+  a,button,input,label{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+  body{font-family:'Jost',sans-serif;background:var(--grey);color:var(--ink);font-weight:400}
+  .d{font-family:'Bounded',sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.02em}
+  .page{max-width:900px;margin:0 auto;padding:0 1.5rem 4rem}
+
+  .top{background:linear-gradient(135deg,var(--navy),var(--deep) 60%,var(--royal));color:#fff;padding:3.2rem 0 2.8rem;margin-bottom:2.6rem}
+  .top .page{padding-bottom:0}
+  .top img{height:46px;margin-bottom:2rem}
+  .top h1{font-size:clamp(1.3rem,3.4vw,2.1rem);line-height:1.3}
+  .top .meta{margin-top:1.4rem;font-size:.85rem;color:rgba(255,255,255,.75);display:flex;gap:2rem;flex-wrap:wrap}
+
+  h2.d{font-size:1.05rem;color:var(--royal);margin:2.8rem 0 1.1rem;letter-spacing:.06em}
+  p.lead{font-size:1rem;line-height:1.65;max-width:64ch}
+  p.note{font-size:.86rem;color:var(--sub);line-height:1.6;max-width:64ch;margin-top:.8rem}
+  a{color:var(--royal)}
+
+  /* карточки */
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+  .card{background:#fff;border:1px solid var(--line);border-radius:1rem;padding:1.15rem 1.3rem}
+  .card b{font-weight:600;font-size:.98rem;display:block}
+  .card p{font-size:.86rem;color:var(--sub);line-height:1.55;margin-top:.3rem}
+  .card .tag{display:inline-block;font-size:.62rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--royal);border:1px solid rgba(87,3,172,.3);border-radius:999px;padding:.16rem .6rem;margin-bottom:.5rem}
+
+  /* таблица-строки */
+  .rows{background:#fff;border:1px solid var(--line);border-radius:1rem;overflow:hidden}
+  .row{display:flex;justify-content:space-between;gap:1rem;padding:.95rem 1.3rem;border-bottom:1px solid var(--line);font-size:.92rem}
+  .row:last-child{border-bottom:none}
+  .row span:last-child{color:var(--sub);text-align:right;flex:0 0 auto}
+  .row .w{color:var(--royal);font-family:'Bounded',sans-serif;font-size:.8rem;flex:0 0 5.2rem}
+  .row .t b{display:block;font-weight:600}
+  .row .t span{display:block;color:var(--sub);font-size:.82rem;margin-top:.15rem}
+
+  /* чек-лист для встречи */
+  .check{background:#fff;border:1px solid var(--line);border-radius:1rem;padding:.4rem 0}
+  .check label{display:flex;gap:.9rem;align-items:flex-start;padding:.8rem 1.3rem;cursor:pointer;border-bottom:1px solid var(--line);font-size:.92rem;line-height:1.5}
+  .check label:last-child{border-bottom:none}
+  .check input{width:19px;height:19px;margin-top:.15rem;accent-color:var(--royal);flex:none}
+  .check input:checked + span{color:var(--sub);text-decoration:line-through}
+
+  /* ритм работы */
+  .rhythm{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem}
+  .rhythm .card .no{font-family:'Bounded',sans-serif;color:var(--lilac);font-size:1.4rem;display:block;margin-bottom:.4rem}
+
+  .fine{font-size:.75rem;color:var(--sub);line-height:1.6;margin-top:2.4rem;border-top:1px solid var(--line);padding-top:1.2rem}
+
+  .actions{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1.4rem}
+  .actions a,.actions button{font-family:'Jost',sans-serif;font-size:.85rem;font-weight:500;cursor:pointer;border-radius:999px;padding:.75rem 1.4rem;border:1px solid var(--royal);background:var(--royal);color:#fff;text-decoration:none}
+  .actions .ghost{background:transparent;color:var(--royal)}
+
+  @media (max-width:640px){
+    .grid,.rhythm{grid-template-columns:1fr}
+    .row{flex-wrap:wrap}
+    .row .w{flex-basis:100%}
+  }
+  @media print{
+    @page{margin:0}
+    body{background:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .page{max-width:none;padding:0 16mm 10mm}
+    .top{padding:16mm 0 12mm;margin-bottom:1.2rem}
+    .card,.rows,.check{break-inside:avoid}
+    h2.d{break-after:avoid}
+    .actions{display:none}
+  }
+</style>
+</head>
+<body>
+
+<div class="top">
+  <div class="page">
+    <img src="img/brand/logo-h-white.png" alt="Символ Девелопмент">
+    <h1 class="d">Старт проекта<br>цифровая витрина символ.рф</h1>
+    <div class="meta">
+      <span>Для: ООО «Символ Девелопмент»</span>
+      <span>Стартовая встреча · сентябрь 2026</span>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+
+  <p class="lead">Предложение согласовано — спасибо за доверие. Эта страница — о том, как мы будем работать: что строим, в каком ритме вы видите результат, что нужно от вас на старте и какие решения примем вместе на встрече.</p>
+
+  <h2 class="d">Что строим</h2>
+  <div class="grid">
+    <div class="card"><span class="tag">ядро</span><b>Дизайн-система по логобуку</b><p>Bounded + Jost, фирменная палитра, единый набор компонентов — всё, что вы видели в прототипе, приведённое к системе.</p></div>
+    <div class="card"><span class="tag">ядро</span><b>Главная и страницы девяти ЖК</b><p>Видео в hero, «Два мира» Город ⇄ Море, скролл-кино, галереи, планировки, статус стройки.</p></div>
+    <div class="card"><span class="tag">ядро</span><b>Каталог квартир из Profitbase</b><p>Живые цены и остатки: если квартира видна на сайте — она свободна. Сайт становится первоисточником.</p></div>
+    <div class="card"><span class="tag">ядро</span><b>Заявки с контекстом и ипотечный калькулятор</b><p>Менеджер получает не «телефон», а задачу клиента: какой лот смотрел, что выбрал. Дубль в Telegram отдела продаж.</p></div>
+    <div class="card"><span class="tag">опции</span><b>Карта, ход строительства, акции, инвестмодуль</b><p>Интерактивная карта Ижевск ⇄ Крым, фотолента стройки и документы 214-ФЗ, акции-сторис, блок для инвесторов в Крыму.</p></div>
+    <div class="card"><span class="tag">опции</span><b>Админ-панель и запуск</b><p>Ваш маркетолог сам меняет акции, фото и тексты. Домен символ.рф, аналитика, обучение сотрудника, месяц сопровождения.</p></div>
+  </div>
+  <p class="note">Точный состав — в согласованном коммерческом предложении; итоговую конфигурацию опций зафиксируем на встрече.</p>
+
+  <h2 class="d">На чём строим</h2>
+  <p class="lead">Сайт делаем на том же классе технологий, что у лидеров рынка — Sminex работает на Next.js, IDA Project на Nuxt. Для вас это означает три вещи: страницы открываются мгновенно даже с телефона, у каждой квартиры свой адрес для поисковиков, а контент правится в удобной админке без программиста. Сервер размещаем в России — этого требует закон о персональных данных, ведь заявки покупателей хранятся у вас.</p>
+
+  <h2 class="d">Как вы будете видеть результат</h2>
+  <div class="rhythm">
+    <div class="card"><span class="no">01</span><b>Живая ссылка с первой недели</b><p>Рабочая версия сайта на закрытом адресе — как с демо. Смотрите в любой момент с любого устройства.</p></div>
+    <div class="card"><span class="no">02</span><b>Письмо каждую пятницу</b><p>Коротко: что появилось за неделю, что смотреть, какие вопросы к вам. Без совещаний ради совещаний.</p></div>
+    <div class="card"><span class="no">03</span><b>Три точки согласования</b><p>Главная страница → шаблон ЖК и каталог → запуск. Они же — этапы оплаты 50 / 30 / 20.</p></div>
+  </div>
+
+  <h2 class="d">Календарь: 8 недель</h2>
+  <div class="rows">
+    <div class="row"><span class="w">Старт</span><span class="t"><b>Договор, доступы, каркас</b><span>Заводим рабочую версию на закрытом адресе, переносим дизайн-систему</span></span></div>
+    <div class="row"><span class="w">1–3</span><span class="t"><b>Дизайн-система и главная</b><span>Живая главная: прелоадер, «Два мира», проекты, ценности, форма</span></span><span>согласование №1</span></div>
+    <div class="row"><span class="w">3–5</span><span class="t"><b>Шаблон ЖК и каталог Profitbase</b><span>Девять страниц проектов, каталог с ценами, карточка квартиры с калькулятором</span></span><span>согласование №2</span></div>
+    <div class="row"><span class="w">5–7</span><span class="t"><b>Опции и наполнение</b><span>Карта, ход стройки, документы, акции, инвестмодуль, админка, доступность</span></span></div>
+    <div class="row"><span class="w">7–8</span><span class="t"><b>Запуск на символ.рф</b><span>Аналитика с целями, обучение сотрудника, месяц правок после запуска</span></span><span>согласование №3</span></div>
+  </div>
+  <p class="note">Срок считаем от аванса и получения доступа к Profitbase — без него не начать каталог, а это самая длинная часть работы.</p>
+
+  <h2 class="d">Что нужно от вас на старте</h2>
+  <div class="check">
+    <label><input type="checkbox"><span><b>Договор и аванс 50 %</b> — с этого дня отсчитываем календарь</span></label>
+    <label><input type="checkbox"><span><b>Доступ к Profitbase</b> — ключ API или контакт вашего менеджера в Profitbase</span></label>
+    <label><input type="checkbox"><span><b>Домен символ.рф</b> — доступ к управлению DNS (понадобится к запуску, но лучше проверить сразу)</span></label>
+    <label><input type="checkbox"><span><b>CRM</b> — куда должны попадать заявки, и кто их принимает</span></label>
+    <label><input type="checkbox"><span><b>Ответственный за контент</b> — один человек с вашей стороны, которого мы обучим админке</span></label>
+    <label><input type="checkbox"><span><b>Актуальные материалы</b> — Яндекс.Диск обновлён? Новые съёмки, рендеры, тексты</span></label>
+  </div>
+
+  <h2 class="d">Решаем на встрече</h2>
+  <div class="check">
+    <label><input type="checkbox"><span><b>Итоговый состав опций</b> — полный пакет или исключаем что-то из списка</span></label>
+    <label><input type="checkbox"><span><b>Каталог:</b> глубокая интеграция (карточки в дизайне Символа) или готовый виджет Profitbase</span></label>
+    <label><input type="checkbox"><span><b>Сервер:</b> размещаем у нас (рекомендуем, в России) или на вашем хостинге</span></label>
+    <label><input type="checkbox"><span><b>Кто принимает работу</b> на каждой из трёх точек согласования</span></label>
+    <label><input type="checkbox"><span><b>Публичный кейс</b> — согласны ли, чтобы после запуска мы рассказали о проекте с цифрами</span></label>
+  </div>
+
+  <h2 class="d">Чего в этой версии не будет</h2>
+  <p class="lead">Чтобы ожидания совпали с результатом, называем сразу. Онлайн-бронирование с оплатой, полное 3D-путешествие по кварталу и личный кабинет покупателя с договорами — это отдельные продукты со своей юридической и технической стороной. Сайт спроектирован так, чтобы их можно было добавить позже, не переделывая основу — обсудим после запуска, когда появятся первые цифры.</p>
+
+  <div class="actions">
+    <button type="button" onclick="window.print()">Сохранить в PDF</button>
+    <a class="ghost" href="index.html">Открыть коммерческое предложение</a>
+  </div>
+
+  <p class="fine">Страница подготовлена к стартовой встрече по проекту «Цифровая витрина символ.рф». Состав, сроки и стоимость — согласно коммерческому предложению и договору. Отметки в списках сохраняются только на этом устройстве до закрытия страницы.</p>
+</div>
+
+</body>
+</html>
